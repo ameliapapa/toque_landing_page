@@ -1,0 +1,231 @@
+/* Micro Animations for Toque Website */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Button hover animations */
+.button, .button-primary, .button-secondary, a.button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  will-change: transform;
+}
+
+.button:hover, .button-primary:hover, .button-secondary:hover, a.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.button:active, .button-primary:active, .button-secondary:active, a.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Link hover animations */
+a:not(.button) {
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+a:not(.button):hover {
+  opacity: 0.8;
+}
+
+/* Image hover animations */
+img {
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+img:hover {
+  transform: scale(1.02);
+}
+
+/* Card hover animations */
+.card, .layout183_item, .blog21_item, .team14_item, .testimonial22_item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.card:hover, .layout183_item:hover, .blog21_item:hover, .team14_item:hover, .testimonial22_item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Navigation items */
+.navbar-link, .nav-link, .footer5_link {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar-link::after, .nav-link::after, .footer5_link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after, .nav-link:hover::after, .footer5_link:hover::after {
+  width: 100%;
+}
+
+/* Form inputs focus animations */
+input, textarea, select {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  transform: scale(1.01);
+  box-shadow: 0 0 0 3px rgba(77, 101, 255, 0.1);
+}
+
+/* Social icons hover */
+.footer5_social-link, .social-icon {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.footer5_social-link:hover, .social-icon:hover {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Logo animation */
+.navbar-logo, .footer-logo {
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover, .footer-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Fade in animation for sections */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Pulse animation for CTA elements */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(77, 101, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(77, 101, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(77, 101, 255, 0);
+  }
+}
+
+.cta-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Smooth icon transitions */
+.icon-embed-xsmall, .icon-embed-small, .icon-embed-medium {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-embed-xsmall:hover, .icon-embed-small:hover, .icon-embed-medium:hover {
+  transform: scale(1.1);
+}
+
+/* Gallery items hover effect */
+.gallery-item, .layout183_image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-item img, .layout183_image-wrapper img {
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img, .layout183_image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* Stagger animation for lists */
+.stagger-item {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* Smooth height transitions */
+.accordion-content, .dropdown-content {
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+/* Ripple effect on click */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.ripple-effect:active::after {
+  width: 300px;
+  height: 300px;
+}
+
+/* Parallax effect hint */
+.parallax-element {
+  transition: transform 0.1s ease-out;
+}
+
+/* Loading skeleton shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 2s infinite linear;
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 1000px 100%;
+}
+
+/* Smooth page transitions */
+.page-transition {
+  animation: fadeInUp 0.5s ease-out;
+}
