@@ -229,3 +229,90 @@ input:focus, textarea:focus, select:focus {
 .page-transition {
   animation: fadeInUp 0.5s ease-out;
 }
+
+/* Fix mobile overlap between header156 and testimonial13 */
+@media (max-width: 767px) {
+  .section_testimonial13 {
+    margin-top: 4rem;
+  }
+}
+
+/* Cart icon positioning - show on desktop, hide on mobile */
+.navbar12_menu-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+@media (max-width: 991px) {
+  .navbar12_menu-buttons {
+    display: none;
+  }
+}
+
+/* Language Toggle Button */
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  background-color: #c5d92c;
+  border-radius: 50px;
+  padding: 4px;
+  position: relative;
+  width: 80px;
+  height: 36px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.language-toggle:hover {
+  background-color: #9dad23;
+  opacity: 1;
+}
+
+.language-toggle-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.language-toggle-option {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  z-index: 2;
+  transition: color 0.3s ease;
+  color: #2d2d2d;
+  padding: 4px 0;
+}
+
+.language-toggle-option.active {
+  color: #2d2d2d;
+}
+
+.language-toggle-slider {
+  position: absolute;
+  width: 50%;
+  height: 28px;
+  background-color: #2d2d2d;
+  border-radius: 50px;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.language-toggle.to-spanish .language-toggle-slider {
+  transform: translateX(0);
+}
+
+.language-toggle.to-english .language-toggle-slider {
+  transform: translateX(100%);
+}
+@media screen and (max-width: 767px) {
+  .section_testimonial13 {
+    margin-top: 4rem;
+  }
+}
