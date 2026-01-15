@@ -237,6 +237,21 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
+/* Align navbar links to the left on desktop */
+@media screen and (min-width: 992px) {
+  .navbar12_container {
+    justify-content: flex-start;
+  }
+
+  .navbar12_menu {
+    margin-left: 2rem;
+  }
+
+  .navbar12_menu-buttons {
+    margin-left: auto;
+  }
+}
+
 /* Cart icon positioning - show on desktop, hide on mobile */
 .navbar12_menu-buttons {
   display: flex;
